@@ -8,7 +8,7 @@ const router =require('./api')
 const app = express();
 const port = 3000;
 app.use(bodyParser.json())
-//app.use("/",router)
+app.use('/',router)
 
 //db connection
 
@@ -19,8 +19,8 @@ db.authenticate().then(() =>{
 
 
 // callbacks
-/*
 
+/*
 app.get('/name',(req,res) => {res.send('Hi Ravi')})
 app.get('/',(req,res) => {res.send(`Server is running on ${port}`)})
 
